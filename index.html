@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brijnesh's Portfolio</title>
+    <link rel="shortcut icon" href="cv.png" type="image/x-icon">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -155,10 +156,10 @@
 
         /* Experience Section */
         #experience {
-            max-width: 800px;
+            max-width: 1400px;
             margin: auto;
             padding: 40px;
-            background: #fff;
+            background: #464b65;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -176,7 +177,7 @@
             border-left: 4px solid #007bff;
             padding: 20px;
             margin: 20px 0;
-            background: #dff1ff;
+            background: #d1d7db;
             border-radius: 8px;
             position: relative;
         }
@@ -227,7 +228,7 @@
         #contact form {
             max-width: 600px;
             margin: auto;
-            background-color: #edf1f5;
+            background-color: #78909c;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -596,21 +597,21 @@
     <section id="experience">
         <h2>Experience</h2>
         <div class="experience-item">
-            <h3>Full Stack Developer</h3>
-            <p><strong>ABC Tech Solutions</strong> | Jan 2023 - Present</p>
+            <h3>Full Stack Django Developer</h3>
+            <p><strong>Unicornis AI Solutions Private Limited</strong> | 3 Months </p>
             <ul>
-                <li>Developed and maintained dynamic web applications using React.js and Django.</li>
-                <li>Implemented RESTful APIs for seamless data exchange.</li>
+                <li>Developed a website that uses AI to analyze and optimize social media ads.</li>
+                <li>Combined AI and web development to boost ad effectiveness and provide insights..</li>
                 <li>Optimized website performance and improved SEO rankings.</li>
             </ul>
         </div>
 
         <div class="experience-item">
-            <h3>Frontend Developer</h3>
-            <p><strong>XYZ Web Agency</strong> | May 2021 - Dec 2022</p>
+            <h3>WordPress Developer</h3>
+            <p><strong>Unicornis AI Solutions Private Limited</strong> | 3 Months </p>
             <ul>
-                <li>Designed interactive UI components using React and Bootstrap.</li>
-                <li>Worked with Redux for state management in complex applications.</li>
+                <li>Designed interactive UI using Elementor and other plugins .</li>
+                <li>Worked with WordPress for building and managing dynamic websites</li>
                 <li>Ensured cross-browser compatibility and mobile responsiveness.</li>
             </ul>
         </div>
@@ -621,23 +622,38 @@
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <form>
+            <form id="contactForm">
+                <!-- Hidden FormSubmit Settings -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                    <textarea class="form-control" name="message" id="message" rows="4" placeholder="Your Message"
+                        required></textarea>
+                    <div id="messageError" style="color: red; display: none; font-size: 0.9rem;">Message must be at
+                        least 50
+                        characters.</div>
                 </div>
                 <button type="submit" class="btn btn-primary">Send</button>
             </form>
+
+            <!-- Success Image -->
+            <div id="successMessage" style="display: none; text-align: center;">
+                <img src="Sending_Complet.gif" alt="Send Successfully" style="max-width: 200px; margin-top: 20px;">
+            </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer>
@@ -658,6 +674,7 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
