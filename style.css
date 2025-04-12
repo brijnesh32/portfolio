@@ -1,0 +1,408 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #4ba5ff;
+    height: 70px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: font-size 200ms linear, color 200ms ease-in-out;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: #000 !important;
+    font-size: larger;
+
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('background.gif') no-repeat center center/cover;
+    height: 100%;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+#home .content {
+    max-width: 50%;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 10px #000;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#home button {
+    background-color: #18bc9c;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#home button:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+#home img {
+    max-width: 40%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #18bc9c;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 70%;
+    margin: 10%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h5 {
+    color: #2c3e50;
+}
+
+.card-text {
+    color: #777;
+}
+
+/* Experience Section */
+#experience {
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px;
+    background: #464b65;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Heading */
+#experience h2 {
+    font-weight: 600;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Experience Items */
+.experience-item {
+    border-left: 4px solid #007bff;
+    padding: 20px;
+    margin: 20px 0;
+    background: #d1d7db;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Experience Header */
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exp-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.exp-header span {
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Company Name */
+.company {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Experience List */
+.experience-item ul {
+    padding-left: 20px;
+}
+
+.experience-item ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #78909c;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact button {
+    background-color: #18bc9c;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #16a085;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+
+footer a {
+    color: #18bc9c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+
+
+    }
+
+    #home .content {
+        max-width: 100%;
+    }
+
+    #home img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .navbar {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    #home img {
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #experience {
+        padding: 20px;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .exp-header span {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #home {
+        padding: 1rem;
+
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    #home button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    footer {
+        padding: 0.8rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .col-md-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .card {
+        width: 90%;
+        margin: 5% auto;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+        transform: translateX(-20%);
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+    }
+}
+
+.block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
